@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BNB Success - Passive Income with Airbnb</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI6+rBTMkR+oY/t9FzMXhWz3w5T8fG21Q+dFdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF5A5F", // Airbnb Signature Red
+              "background-light": "#F9F9F9", // Slightly softer white background
+              "background-dark": "#121212",
+              "card-light": "#FFFFFF",
+              "card-dark": "#1E1E1E",
+              "text-light": "#222222", // Stronger black for better contrast
+              "text-dark": "#EAEAEA",
+              "subtext-light": "#717171",
+              "subtext-dark": "#B0B0B0",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+              lg: "16px",
+              xl: "20px", // Slightly larger radius for modern cards
+            },
+            boxShadow: {
+              'custom': '0 4px 12px rgba(0, 0, 0, 0.08)', // Soft, professional shadow
+              'primary-glow': '0 0 15px rgba(255, 90, 95, 0.4)', // Subtle glow for main buttons
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Poppins", "sans-serif";
+      }
+
+      /* Custom style for the testimonial carousel to hide the scrollbar cleanly */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Pulse animation for map pins (keeping for reference, though map div is commented out) */
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        50% {
+          transform: scale(1.4); /* Slightly toned down pulse */
+          opacity: 0.6;
+        }
+      }
+
+      .pulse-anim {
+        animation: pulse 2s infinite;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="min-h-screen flex flex-col items-center p-4 sm:p-8">
+      <header class="w-full max-w-6xl mx-auto mb-10 text-center">
+        <img
+          alt="BNB Success Logo"
+          class="h-16 sm:h-20 mx-auto mb-4"
+          src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/NcJFh8lyKgt297OXDFZg/media/67b6dd9a7c922fe8cd39e623.png"
+          loading="lazy"
+        />
+        <p
+          class="text-lg sm:text-xl mb-3 text-subtext-light dark:text-subtext-dark max-w-4xl mx-auto"
+        >
+          For Ambitious Aussies Wanting to Build Passive Income with Airbnb
+        </p>
+        <h1
+          class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-text-light dark:text-text-dark mb-4 leading-tight"
+        >
+          People in Australia Are Making
+          <span class="text-primary block sm:inline-block"> $11,000+/Month on Airbnb </span> Without
+          Owning Property — Just Copy Their System and Book Your First Guest by
+          <span class="text-primary">2 November</span>.
+        </h1>
+        <p
+          class="text-base sm:text-lg font-medium text-subtext-light dark:text-subtext-dark max-w-3xl mx-auto"
+        >
+          No real estate license. No experience. No property ownership required.
+        </p>
+      </header>
+
+      <main class="w-full max-w-6xl mx-auto space-y-16">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+          <div class="lg:col-span-3">
+            <div
+              class="bg-card-light dark:bg-card-dark p-2 sm:p-4 rounded-xl shadow-custom h-full border border-gray-100 dark:border-gray-800"
+            >
+              <div
+                class="relative pt-[56.25%] w-full rounded-lg overflow-hidden shadow-2xl"
+              >
+                <iframe
+                  class="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
+                  title="BNB Success Video Sales Letter"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div
+              class="bg-card-light dark:bg-card-dark p-6 sm:p-8 rounded-xl shadow-custom h-full border border-primary/20 dark:border-primary/5 flex flex-col sticky top-8"
+            >
+              <h4
+                class="text-2xl font-bold text-text-light dark:text-text-dark mb-2 border-b-2 border-primary/50 pb-2"
+              >
+                Book Your Free Call Now 🚀
+              </h4>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark mb-6">
+                Let us show you the step-by-step path to your first $11,000/month property.
+              </p>
+              <form
+                action="#"
+                class="space-y-5 flex-grow flex flex-col"
+                method="POST"
+              >
+                <div class="flex-grow space-y-4">
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light dark:text-text-dark"
+                      for="full-name"
+                      >Full Name <span class="text-primary">*</span></label
+                    >
+                    <div class="mt-1">
+                      <input
+                        autocomplete="name"
+                        class="block w-full rounded-md border-gray-300 dark:border-gray-700 bg-background-light dark:bg-card-dark text-text-light dark:text-text-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-3 transition-colors duration-200"
+                        id="full-name"
+                        name="full-name"
+                        placeholder="John Doe"
+                        type="text"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light dark:text-text-dark"
+                      for="email"
+                      >Email <span class="text-primary">*</span></label
+                    >
+                    <div class="mt-1">
+                      <input
+                        autocomplete="email"
+                        class="block w-full rounded-md border-gray-300 dark:border-gray-700 bg-background-light dark:bg-card-dark text-text-light dark:text-text-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-3 transition-colors duration-200"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        type="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light dark:text-text-dark"
+                      for="phone"
+                      >Phone <span class="text-primary">*</span></label
+                    >
+                    <div class="mt-1">
+                      <input
+                        autocomplete="tel"
+                        class="block w-full rounded-md border-gray-300 dark:border-gray-700 bg-background-light dark:bg-card-dark text-text-light dark:text-text-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-3 transition-colors duration-200"
+                        id="phone"
+                        name="phone"
+                        placeholder="+61 (0) 4XX XXX XXX"
+                        type="tel"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-4">
+                  <button
+                    class="w-full flex justify-center py-4 px-4 border border-transparent rounded-lg shadow-xl text-lg font-bold text-white bg-primary hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300 transform hover:scale-[1.01] shadow-primary-glow"
+                    type="submit"
+                  >
+                    Start Your Business Today
+                  </button>
+                </div>
+              </form>
+              <p
+                class="mt-4 text-xs text-subtext-light dark:text-subtext-dark text-center"
+              >
+                Zero-obligation call. No experience or property ownership required.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        ---
+
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-xl shadow-custom p-6 border border-gray-100 dark:border-gray-800"
+          >
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left"
+            >
+              <div class="flex -space-x-3 sm:-space-x-4 overflow-hidden">
+                <img
+                  alt="Client 1"
+                  class="inline-block h-12 w-12 sm:h-14 sm:w-14 rounded-full ring-4 ring-card-light dark:ring-card-dark object-cover border border-primary/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQPlLzBz59Z1uZBmaKKHt09fgTmzD-jONj5hO9DE8Rv4fTfpJgmIttZqRLhyIqVo6Vp3x8yhMJ-T0ZGyq7wBOVSsNLWk0oWWpU_2ppR6xsXR5Att32oef1HgZX2mZ0-esM8nkvHvtjMPHVp9ysBFt0aqntpaeUHHl9so2e07mJoiczwEALGkwJxL2lIGZ1xEjo5Y4oNADfLJDZ8veCGRcRP1IjiqhNrCYD1sAZ0WS8LX5pFSO_3VlnUl5p76-u5aMXeIBlEoO3zqqK"
+                />
+                <img
+                  alt="Client 2"
+                  class="inline-block h-12 w-12 sm:h-14 sm:w-14 rounded-full ring-4 ring-card-light dark:ring-card-dark object-cover border border-primary/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpnU7uut3UMJjYqK7wzW0gRq-rBoRqSvEhR-5ICSeM5Y3FfzOV8zztU6HIBBURuk-2qFJvB9D4QaoH7Z4dbAqaCVYmlY0aQfOsIGBxTsH4qkwoJ1rrBkaR4l7aLfq34CMIMrFkXgpQfEKmGxKCAet24FZjROulV69yDOPgL39rXy0tNONAN3cCNIAfqo7Jpa6O1eHLZEBR42KatULu2hmlBmFmtUJotPR1aV72Wa_v2CwRvUv3QdJ1VSMFIaKihmivAkPtlTIMFF1w"
+                />
+                <img
+                  alt="Client 3"
+                  class="inline-block h-12 w-12 sm:h-14 sm:w-14 rounded-full ring-4 ring-card-light dark:ring-card-dark object-cover border border-primary/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjzjIKvBr5YElaiF421DVHhFmf4PYpMGHgOXFB2UvxfOvtHegvQPFLHCYtufUbvPSE3TORGJp1HAzCoEmlLpjzMtjAUlDbZsyAiHspQWx_Zz9sarPs7diheBGNrXDkvTrMrQkWraksNNDha2yRAlQqujC56SLh0_kgf9DwoMKCy4OHBTj21PdY8T8VF8XJUdV4Wxql3IFRKCc3GVQmNzfOQ1ppR31bBhFCAeAx_KrVwAY2PpPhCLD3u0Bncr7ztLe8nc9o38WqDr1M"
+                />
+              </div>
+              <p
+                class="text-lg sm:text-xl font-medium text-text-light dark:text-text-dark"
+              >
+                Trusted by over
+                <span class="font-extrabold text-primary">2,500+</span> ambitious
+                hosts globally.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        ---
+
+        <section
+          class="bg-card-light dark:bg-card-dark p-6 sm:p-10 rounded-xl shadow-custom"
+        >
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-center text-text-light dark:text-text-dark mb-12"
+          >
+            How it Works: Our 3-Step System
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div class="flex flex-col items-center p-4 rounded-lg hover:bg-background-light dark:hover:bg-card-dark/50 transition duration-300">
+              <div
+                class="flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6 border-4 border-primary/20"
+              >
+                <span class="material-icons text-primary text-4xl">search</span>
+              </div>
+              <h3
+                class="text-xl font-bold text-text-light dark:text-text-dark mb-3"
+              >
+                1. Property Acquisition
+              </h3>
+              <p class="text-base text-subtext-light dark:text-subtext-dark">
+                How to find and secure your first Airbnb property in under **30
+                days** (even if you've never spoken to a real estate agent before)
+                – we'll teach you how to convince landlords to say "yes" when
+                everyone else got rejected...
+              </p>
+            </div>
+            <div class="flex flex-col items-center p-4 rounded-lg hover:bg-background-light dark:hover:bg-card-dark/50 transition duration-300">
+              <div
+                class="flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6 border-4 border-primary/20"
+              >
+                <span class="material-icons text-primary text-4xl">bed</span>
+              </div>
+              <h3
+                class="text-xl font-bold text-text-light dark:text-text-dark mb-3"
+              >
+                2. Setup & Optimisation
+              </h3>
+              <p class="text-base text-subtext-light dark:text-subtext-dark">
+                Our "Profit Maximiser" system cuts furnishing costs by **50%** while
+                commanding premium nightly rates... including our exact supplier
+                list that saved us over $4,000 on our most recent property setup
+                and you'll get access to it day one...
+              </p>
+            </div>
+            <div class="flex flex-col items-center p-4 rounded-lg hover:bg-background-light dark:hover:bg-card-dark/50 transition duration-300">
+              <div
+                class="flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6 border-4 border-primary/20"
+              >
+                <span class="material-icons text-primary text-4xl"
+                  >autorenew</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold text-text-light dark:text-text-dark mb-3"
+              >
+                3. Automation & Scale
+              </h3>
+              <p class="text-base text-subtext-light dark:text-subtext-dark">
+                The exact automation tools we use to manage **30+ properties in
+                just 5-10 hours per week**... including our dynamic
+                pricing formula that increases our monthly revenue by 45%
+                overnight...
+              </p>
+            </div>
+          </div>
+          <div class="mt-12 text-center">
+            <button
+              class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-primary text-white font-extrabold text-lg rounded-lg hover:bg-red-600 transition-all duration-300 shadow-xl shadow-primary/30 transform hover:scale-[1.03] focus:ring-4 focus:ring-primary/50"
+              type="button"
+            >
+              Start Your Airbnb Business Today
+            </button>
+          </div>
+        </section>
+
+        ---
+
+        <section class="py-4">
+          <div class="max-w-full mx-auto">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-center text-text-light dark:text-text-dark mb-12"
+            >
+              Real Results, Real Hosts: Hear Their Success
+            </h2>
+            <div class="relative">
+              <div
+                class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide gap-6 pb-8 -mx-4 px-4 sm:mx-0 sm:px-0"
+              >
+                <div
+                  class="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[48%] lg:w-[32%]"
+                >
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-6 sm:p-8 rounded-xl shadow-custom h-full flex flex-col border border-gray-100 dark:border-gray-800 hover:shadow-lg transition duration-300"
+                  >
+                    <div class="flex items-start mb-4">
+                      <img
+                        alt="Sarah L. profile picture"
+                        class="w-14 h-14 rounded-full mr-4 object-cover border-2 border-primary"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQPlLzBz59Z1uZBmaKKHt09fgTmzD-jONj5hO9DE8Rv4fTfpJgmIttZqRLhyIqVo6Vp3x8yhMJ-T0ZGyq7wBOVSsNLWk0oWWpU_2ppR6xsXR5Att32oef1HgZX2mZ0-esM8nkvHvtjMPHVp9ysBFt0aqntpaeUHHl9so2e07mJoiczwEALGkwJxL2lIGZ1xEjo5Y4oNADfLJDZ8veCGRcRP1IjiqhNrCYD1sAZ0WS8LX5pFSO_3VlnUl5p76-u5aMXeIBlEoO3zqqK"
+                      />
+                      <div>
+                        <p
+                          class="font-extrabold text-text-light dark:text-text-dark text-lg"
+                        >
+                          Sarah L.
+                        </p>
+                        <p
+                          class="text-sm font-medium text-primary dark:text-primary"
+                        >
+                          Property Owner, Miami
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex text-yellow-500 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote
+                      class="text-text-light dark:text-text-dark text-base italic flex-grow"
+                    >
+                      "Working with BNB Success has been a game-changer. My
+                      occupancy rates have **skyrocketed**, and I'm earning more
+                      than I ever thought possible with zero stress. Their team
+                      is professional, responsive, and truly cares about my
+                      success."
+                    </blockquote>
+                  </div>
+                </div>
+                <div
+                  class="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[48%] lg:w-[32%]"
+                >
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-6 sm:p-8 rounded-xl shadow-custom h-full flex flex-col border border-gray-100 dark:border-gray-800 hover:shadow-lg transition duration-300"
+                  >
+                    <div class="flex items-start mb-4">
+                      <img
+                        alt="Michael B. profile picture"
+                        class="w-14 h-14 rounded-full mr-4 object-cover border-2 border-primary"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpnU7uut3UMJjYqK7wzW0gRq-rBoRqSvEhR-5ICSeM5Y3FfzOV8zztU6HIBBURuk-2qFJvB9D4QaoH7Z4dbAqaCVYmlY0aQfOsIGBxTsH4qkwoJ1rrBkaR4l7aLfq34CMIMrFkXgpQfEKmGxKCAet24FZjROulV69yDOPgL39rXy0tNONAN3cCNIAfqo7Jpa6O1eHLZEBR42KatULu2hmlBmFmtUJotPR1aV72Wa_v2CwRvUv3QdJ1VSMFIaKihmivAkPtlTIMFF1w"
+                      />
+                      <div>
+                        <p
+                          class="font-extrabold text-text-light dark:text-text-dark text-lg"
+                        >
+                          Michael B.
+                        </p>
+                        <p
+                          class="text-sm font-medium text-primary dark:text-primary"
+                        >
+                          Investor, Aspen
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex text-yellow-500 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <blockquote
+                      class="text-text-light dark:text-text-dark text-base italic flex-grow"
+                    >
+                      "I was skeptical about co-hosting at first, but BNB
+                      Success proved its value within the first month. They
+                      handle everything flawlessly. It's the definition of
+                      **passive income**. I'm already looking for my next property
+                      to partner with them on."
+                    </blockquote>
+                  </div>
+                </div>
+                <div
+                  class="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[48%] lg:w-[32%]"
+                >
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-6 sm:p-8 rounded-xl shadow-custom h-full flex flex-col border border-gray-100 dark:border-gray-800 hover:shadow-lg transition duration-300"
+                  >
+                    <div class="flex items-start mb-4">
+                      <img
+                        alt="Jessica T. profile picture"
+                        class="w-14 h-14 rounded-full mr-4 object-cover border-2 border-primary"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjzjIKvBr5YElaiF421DVHhFmf4PYpMGHgOXFB2UvxfOvtHegvQPFLHCYtufUbvPSE3TORGJp1HAzCoEmlLpjzMtjAUlDbZsyAiHspQWx_Zz9sarPs7diheBGNrXDkvTrMrQkWraksNNDha2yRAlQqujC56SLh0_kgf9DwoMKCy4OHBTj21PdY8T8VF8XJUdV4Wxql3IFRKCc3GVQmNzfOQ1ppR31bBhFCAeAx_KrVwAY2PpPhCLD3u0Bncr7ztLe8nc9o38WqDr1M"
+                      />
+                      <div>
+                        <p
+                          class="font-extrabold text-text-light dark:text-text-dark text-lg"
+                        >
+                          Jessica T.
+                        </p>
+                        <p
+                          class="text-sm font-medium text-primary dark:text-primary"
+                        >
+                          Remote Host, Austin
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex text-yellow-500 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote
+                      class="text-text-light dark:text-text-dark text-base italic flex-grow"
+                    >
+                      "As someone who travels frequently, managing my property
+                      was a nightmare. BNB Success took over and turned it into
+                      a profitable, **hassle-free venture**. I trust them completely
+                      to provide top-notch service to my guests."
+                    </blockquote>
+                  </div>
+                </div>
+                <div
+                    class="snap-start shrink-0 w-[calc(100%-2rem)] sm:w-[48%] lg:w-[32%]"
+                  >
+                    <div
+                      class="bg-card-light dark:bg-card-dark p-6 sm:p-8 rounded-xl shadow-custom h-full flex flex-col border border-gray-100 dark:border-gray-800 hover:shadow-lg transition duration-300"
+                    >
+                      <div class="flex items-start mb-4">
+                        <img
+                          alt="Emily R. profile picture"
+                          class="w-14 h-14 rounded-full mr-4 object-cover border-2 border-primary"
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHJ-o4mvpxDwOlmwZThk7YqFYmU3B1Dd_-u9RocNwl100At36rDlsS4U3ZV6M5tIScmeqTG55nEHeqK3gtaA_TZbOGruc06BlHyaN-bjxbEdqMWzLulFvsdUpdz308i58EQ2zU_zhGN5Y52DKFv86A_eCZ43cX6k2Pl4f91X9jbZyncXdmaK5d9RIjMzurMVJ4Axz-mL7cWoSIr2n62ahnrHWjzHP-FBRZ198Xx0YB8aJyI8f2eEgh9awik5RD8Y9RA6FqN12s-LO3"
+                        />
+                        <div>
+                          <p
+                            class="font-extrabold text-text-light dark:text-text-dark text-lg"
+                          >
+                            Emily R.
+                          </p>
+                          <p
+                            class="text-sm font-medium text-primary dark:text-primary"
+                          >
+                            New Host, Chicago
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex text-yellow-500 mb-3">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <blockquote
+                        class="text-text-light dark:text-text-dark text-base italic flex-grow"
+                      >
+                        "They made starting on a rental platform so easy. From the
+                        professional photos to managing all guest inquiries, I
+                        couldn't have done it without them. My calendar was **booked
+                        solid for three months straight**!"
+                      </blockquote>
+                    </div>
+                  </div>
+              </div>
+              
+              <div
+                class="hidden md:flex absolute top-1/2 -translate-y-1/2 justify-between w-full px-2 pointer-events-none"
+              >
+                <button
+                  class="testimonial-prev pointer-events-auto bg-card-light dark:bg-card-dark rounded-full p-3 shadow-xl hover:bg-gray-100 dark:hover:bg-card-dark/80 transition duration-300 border border-gray-200 dark:border-gray-700"
+                  aria-label="Previous Testimonial"
+                >
+                  <span
+                    class="material-icons text-text-light dark:text-text-dark text-2xl"
+                    >arrow_back_ios</span
+                  >
+                </button>
+                <button
+                  class="testimonial-next pointer-events-auto bg-card-light dark:bg-card-dark rounded-full p-3 shadow-xl hover:bg-gray-100 dark:hover:bg-card-dark/80 transition duration-300 border border-gray-200 dark:border-gray-700"
+                  aria-label="Next Testimonial"
+                >
+                  <span
+                    class="material-icons text-text-light dark:text-text-dark text-2xl"
+                    >arrow_forward_ios</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        ---
+
+        <section
+          class="bg-card-light dark:bg-card-dark p-6 sm:p-10 rounded-xl shadow-custom"
+        >
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-center text-text-light dark:text-text-dark mb-4"
+          >
+            A Real Community of Aussies 🇦🇺
+          </h2>
+          <h4
+            class="text-xl font-medium text-center text-subtext-light dark:text-subtext-dark mb-10 max-w-3xl mx-auto"
+          >
+            Our in-person events help members connect, collaborate, and build
+            real, profitable opportunities together.
+          </h4>
+          <div class="mb-10 rounded-lg overflow-hidden shadow-2xl">
+            <img
+              src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/NcJFh8lyKgt297OXDFZg/media/6887c3d97377cf316c87a862.jpeg"
+              alt="BNB Success community members at an in-person event"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <h2
+            class="text-3xl font-bold text-center text-text-light dark:text-text-dark my-10"
+          >
+            Our Members Come From Every Walk of Life
+          </h2>
+          <p
+            class="text-center text-subtext-light dark:text-subtext-dark mb-12 max-w-3xl mx-auto text-lg"
+          >
+            From 18-year-old students to 60-year-old retirees, our members are
+            proving that you don't need experience, capital, or crazy amounts of
+            time to get results.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Young Professionals
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Build wealth early while climbing the corporate ladder.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Tradesmen
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Turn your hands-on skills into rental profits.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Parents
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Flexible income that works around family time.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Students
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Learn business skills while earning.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Power Couples
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Combine your resources and skills for accelerated wealth.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Small Business Owners
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Diversify beyond your main business.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Property Managers
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Turn your organizational skills into a property empire.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-md hover:border-primary/50"
+            >
+              <h3
+                class="text-lg font-extrabold text-text-light dark:text-text-dark mb-1"
+              >
+                Retirees
+              </h3>
+              <p class="text-sm text-subtext-light dark:text-subtext-dark">
+                Turn your free time into secure income.
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-center text-lg font-extrabold text-primary mt-12"
+          >
+            And many more Australians are joining the movement!
+          </p>
+        </section>
+
+        ---
+
+        <section class="py-4">
+          <div class="max-w-6xl mx-auto text-center">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-text-light dark:text-text-dark mb-4"
+            >
+              It’s Working All Across Australia
+            </h2>
+            <p
+              class="text-lg text-subtext-light dark:text-subtext-dark mb-10 max-w-3xl mx-auto"
+            >
+              Our members are growing portfolios in major cities, outer suburbs,
+              and regional towns—wherever demand for short-stays exists.
+            </p>
+            <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700">
+                <img
+                  src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/NcJFh8lyKgt297OXDFZg/media/688a322ee7e769f445fccd9a.png"
+                  alt="Map of Australia showing BNB Success locations"
+                  class="w-full h-auto object-contain"
+                  loading="lazy"
+                />
+            </div>
+          </div>
+        </section>
+
+        ---
+
+        <section
+          class="bg-primary/5 dark:bg-card-dark p-6 sm:p-10 rounded-xl shadow-custom border border-primary/10"
+        >
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-center text-text-light dark:text-text-dark mb-12"
+          >
+            A Growing Movement With Real Results
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="flex flex-col items-center bg-card-light dark:bg-background-dark p-6 rounded-lg shadow-lg border-b-4 border-primary/70">
+              <h3 class="text-5xl font-extrabold text-primary mb-2">$8.6M+</h3>
+              <p
+                class="text-lg font-semibold text-text-light dark:text-text-dark"
+              >
+                Revenue Generated by Members
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center bg-card-light dark:bg-background-dark p-6 rounded-lg shadow-lg border-b-4 border-primary/70">
+              <h3 class="text-5xl font-extrabold text-primary mb-2">80+</h3>
+              <p
+                class="text-lg font-semibold text-text-light dark:text-text-dark"
+              >
+                Units Currently Managed
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center bg-card-light dark:bg-background-dark p-6 rounded-lg shadow-lg border-b-4 border-primary/70">
+              <h3 class="text-5xl font-extrabold text-primary mb-2">32 Days</h3>
+              <p
+                class="text-lg font-semibold text-text-light dark:text-text-dark"
+              >
+                Average Time to Launch First Airbnb
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <a
+              class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-primary text-white font-extrabold text-lg rounded-lg hover:bg-red-600 transition-all duration-300 shadow-xl shadow-primary/30 transform hover:scale-[1.03] focus:ring-4 focus:ring-primary/50"
+              href="#"
+            >
+              <span class="material-icons">rocket_launch</span>
+              Start Your Success Story
+            </a>
+          </div>
+        </section>
+
+        ---
+
+        <section class="py-4">
+          <div class="max-w-6xl mx-auto">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-center text-text-light dark:text-text-dark mb-4"
+            >
+              About Us - Meet Your Mentors
+            </h2>
+            <p
+              class="text-center text-subtext-light dark:text-subtext-dark mb-10 max-w-3xl mx-auto text-lg"
+            >
+              We are a team of passionate hosting experts dedicated to helping
+              you succeed. With years of experience and a deep understanding of
+              the market, we provide the guidance and support you need to
+              thrive.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-custom text-center flex flex-col items-center border border-gray-100 dark:border-gray-800"
+              >
+                <img
+                  alt="Mentor 1: Jordan Pham | Co-Founder"
+                  class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg border-4 border-primary/50"
+                  src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/NcJFh8lyKgt297OXDFZg/media/67ee1b013792944cecf5bc70.png"
+                />
+                <h3
+                  class="text-xl font-extrabold text-text-light dark:text-text-dark"
+                >
+                  Jordan Pham
+                </h3>
+                <p class="text-primary font-bold mb-4">Co-Founder</p>
+                <p class="text-subtext-light dark:text-subtext-dark text-base">
+                  At 22, I built **30+ Airbnb properties** generating $200,000
+                  monthly without owning any. I now help others start their
+                  own short term rental business, leveraging my background in Property at the University of Melbourne.
+                </p>
+              </div>
+              <div
+                class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-custom text-center flex flex-col items-center border border-gray-100 dark:border-gray-800"
+              >
+                <img
+                  alt="Mentor 2: Terence Mok"
+                  class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg border-4 border-primary/50"
+                  src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/NcJFh8lyKgt297OXDFZg/media/6822f09e9c2a1123d65e5872.jpeg"
+                />
+                <h3
+                  class="text-xl font-extrabold text-text-light dark:text-text-dark"
+                >
+                  Terence Mok
+                </h3>
+                <p class="text-primary font-bold mb-4">Co-Founder</p>
+                <p class="text-subtext-light dark:text-subtext-dark text-base">
+                  I’m the founder of Live Luxe Pty Ltd, managing a portfolio of
+                  over **30 properties**. I focus on educating others on how to
+                  build, scale, and fully **automate** their own businesses for true passive income.
+                </p>
+              </div>
+              <div
+                class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-custom text-center flex flex-col items-center border border-gray-100 dark:border-gray-800"
+              >
+                <img
+                  alt="Mentor 3: Stanley Ma"
+                  class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg border-4 border-primary/50"
+                  src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/NcJFh8lyKgt297OXDFZg/media/67ef834739379a765a01f46a.jpeg"
+                />
+                <h3
+                  class="text-xl font-extrabold text-text-light dark:text-text-dark"
+                >
+                  Stanley Ma
+                </h3>
+                <p class="text-primary font-bold mb-4">Co-Founder</p>
+                <p class="text-subtext-light dark:text-subtext-dark text-base">
+                  My Bachelor of Property and Real Estate from Deakin University
+                  gave me the foundation to build multiple successful short-term
+                  rental operations. I specialize in **practical scaling strategies** to help you grow from one property to many.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer
+        class="w-full max-w-6xl mx-auto mt-16 pt-8 border-t border-gray-300 dark:border-gray-700 text-center"
+      >
+        <div class="flex justify-center space-x-6 mb-4 text-subtext-light dark:text-subtext-dark">
+            <a href="#" class="hover:text-primary transition duration-200 text-sm">Privacy Policy</a>
+            <a href="#" class="hover:text-primary transition duration-200 text-sm">Terms of Service</a>
+            <a href="#" class="hover:text-primary transition duration-200 text-sm">Contact Us</a>
+        </div>
+        <p class="text-sm text-subtext-light dark:text-subtext-dark">
+          © 2025 BNB Success. All rights reserved.
+        </p>
+        <p class="text-xs text-subtext-light/70 dark:text-subtext-dark/70 mt-2 max-w-3xl mx-auto">
+            *Disclaimer: Results are not typical and depend on market conditions, property quality, and execution. The figures are based on the success of our top performing members.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.flex.overflow-x-auto');
+            const prevBtn = document.querySelector('.testimonial-prev');
+            const nextBtn = document.querySelector('.testimonial-next');
+
+            if (container) {
+                const scrollAmount = 300; // Adjust scroll distance
+
+                const scroll = (direction) => {
+                    if (direction === 'next') {
+                        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    } else if (direction === 'prev') {
+                        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    }
+                };
+
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        scroll('prev');
+                    });
+                }
+                
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        scroll('next');
+                    });
+                }
+            }
+        });
+    </script>
+  </body>
+</html>
